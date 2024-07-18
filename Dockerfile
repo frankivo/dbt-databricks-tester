@@ -16,3 +16,4 @@ RUN python -m pip install --upgrade pip && pip install "tox>=3.2.0"
 RUN tox -e unit
 
 ADD --chown=testuser test.env /home/testuser/dbt-databricks
+# RUN sed tox.ini -e 's#/adapter/#/adapter/constraints/#g' -i
